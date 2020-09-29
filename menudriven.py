@@ -26,7 +26,7 @@ elif "httpd" in p and "status" in p:
 elif "OS" in p and "docker" in p and "running" in p:
         webbrowser.open("http://192.168.43.137/cgi-bin/osstatus.py")
 elif "docker" in p and "stop" in p:
-        webbrowser.open("http://192.168.43.137/cgi-bin/dockerstop.py")
+        webbrowser.open("http://192.168.43.137/osstop.html")
 elif "docker" in p and "status" in p:
         webbrowser.open("http://192.168.43.137/cgi-bin/dockerstatus.py")
 elif "docker" in p and ("run" in p or "start" in p):
