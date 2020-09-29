@@ -5,7 +5,6 @@ import subprocess
 import cgi
 form=cgi.FieldStorage()
 p=form.getvalue("c")
-print(p)
 cmd="sudo {}".format(p)
 print(cmd)
 out=subprocess.getstatusoutput(cmd)
