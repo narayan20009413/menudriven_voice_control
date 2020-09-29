@@ -1,13 +1,27 @@
-#!/usr/bin/python3
-print("content-type: text/html")
-print()
-import subprocess
-command="sudo docker ps"
-output=subprocess.getstatusoutput(command)
-status=output[0]
-info=output[1]
-if status==0:
-  print("currently running OS....{}".format(info))
-else:
-  print("some error: {}".format(info))
+<style>
+body{
+   height:500px;
+   width:500px;
+   text-align:center;
+   padding:20px;
+   margin:auto;
+   backgound-size:cover;
+   background:linear-gradient(rgba(45,40,43,0.4),rgba(200,40,60,0.7));
+   
+}
+</style>
+<body>
+<form action="http://192.168.43.137/cgi-bin/osrun.py">
+<h2><b>Enter your OS name :</b></h2><input type='text' name='x' />
+<br/>
+<h2><b>Select an OS image :</b></h2>
+<select name="y">
+<option>ubuntu:14.04</option>
+<option>centos:7</option>
+<option>centos:latest</option>
+</select>
+<br/><br/>
+<input type =submit />
+</form>
+</body>
 
